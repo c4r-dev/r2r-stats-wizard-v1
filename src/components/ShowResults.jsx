@@ -9,6 +9,38 @@ function ShowResults() {
     let guess = sessionStorage.getItem("guess");
     const actualAnswer = 91;
 
+    // Determines feedback text based on the difference between the guess and the actual answer.
+    function getFeedback() {
+        let header = "";
+        let question1 = "";
+        let question2 = "";
+
+        if (guess >= actualAnswer - 5 && guess <= actualAnswer + 5) {
+            header = "Wow, great guess!";
+            question1 = "What implications do you think this statistic has on the research that informs your work?";
+            question2 = "Have you taken any measures to account for them?";
+        }
+        else if (guess >= actualAnswer - 15 && guess <= actualAnswer + 15) {
+            header = "Not a bad guess!";
+            question1 = "What implications do you think this statistic has on the research that informs your work?";
+            question2 = "Have you taken any measures to account for them?";
+        }
+        else if (guess < actualAnswer) {
+            header = "Shocked?";
+            question1 = "Why do you think your guess was so far off?";
+            question2 = "What might this suggest about your lab, its blind spots, and your field's culture more broadly?";
+        }
+        else {
+            header = "Interesting!";
+            question1 = "Do you think people generally overestimate the degree to which they can trust published work?";
+            question2 = "Has this impacted how you discuss findings in your field with others?";
+        }
+        return { header, question1, question2 };
+    }
+
+    let feedbackText = getFeedback();
+
+
     return (
         <div className="content-container">
             <h1>
@@ -34,36 +66,13 @@ function ShowResults() {
                     <RavenIcon style={{ width: "100%", margin: "0 auto" }} />
                 </div>
                 <div className="footer-right">
-                    <h2>SHOCKED?</h2>
-                    {guess >= actualAnswer - 10 &&
-                    guess <= actualAnswer + 10 ? (
+                    <h2>{feedbackText.header}</h2>
                         <ul>
                             <li>
-                                What do you think this should mean to your lab?
+                                {feedbackText.question1}
                             </li>
-                            <li>How should it affect your work?</li>
+                            <li>{feedbackText.question2}</li>
                         </ul>
-                    ) : guess < actualAnswer ? (
-                        <ul>
-                            <li>Why do you think your guess was so far off?</li>
-                            <li>
-                                What might this suggest about your lab, its
-                                blind spots, and your field's culture more
-                                broadly?
-                            </li>
-                        </ul>
-                    ) : (
-                        <ul>
-                            <li>
-                                Why do you suppose less people know about this
-                                problem than you expected?
-                            </li>
-                            <li>
-                                How do you think someone could end up holding
-                                that belief?
-                            </li>
-                        </ul>
-                    )}
                     <br></br>
                     <p>
                         <strong>
