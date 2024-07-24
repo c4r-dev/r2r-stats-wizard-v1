@@ -7,7 +7,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<RangeSlider min={0} max={100} value={50} step={1} />} />
+          <Route path="/" element={<RangeSlider min={0} max={100} value={0} step={1} />} />
           <Route path="/showResults" element={<ShowResults />} />
         </Routes>
       </BrowserRouter>
