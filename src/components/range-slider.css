@@ -163,7 +163,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   flex-direction: row;
 }
 .percent-raven-container-left {
@@ -179,7 +179,14 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
+}
+.percent-raven-container-right h2{
+  margin: 0;
+  font-size: 50px;
+}
+.percent-raven-container-left h2{
+  margin: 0;
+  font-size: 50px;
 }
 .percent-raven-container h1 {
   margin: 0;
