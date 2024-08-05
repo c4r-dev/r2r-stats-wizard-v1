@@ -114,7 +114,7 @@ function RangeSlider({ min, max, value, step }) {
                         }}
                     />
                 ),
-                threshold: 100,
+                threshold: 101,
             },
         ];
 
