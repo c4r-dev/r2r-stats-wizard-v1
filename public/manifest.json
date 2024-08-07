@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Stats Widget",
+  "name": "Road To Rigor: Stats Widget",
   "icons": [
     {
       "src": "favicon.ico",
