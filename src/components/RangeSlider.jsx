@@ -40,18 +40,23 @@ function RangeSlider({ min, max, value, step }) {
         return <Raven5 style={{ width: "100%", margin: "0 auto" }} />;
       }
      */
+    const ravenStyle = {
+        width: "100%",
+        height: "80%",
+        // maxWidth: "300px",
+        position: "absolute",
+        top: 0,
+        left: 0,
+        opacity: 0,
+        transition: "opacity 0.5s",
+    }
+
+
         const images = [
             {
                 component: (
                     <Raven1
-                        style={{
-                            width: "100%",
-                            position: "absolute",
-                            top: 0,
-                            left: 0,
-                            opacity: 0,
-                            transition: "opacity 0.5s",
-                        }}
+                        style={ravenStyle}
                     />
                 ),
                 threshold: 25,
@@ -59,14 +64,7 @@ function RangeSlider({ min, max, value, step }) {
             {
                 component: (
                     <Raven2
-                        style={{
-                            width: "100%",
-                            position: "absolute",
-                            top: 0,
-                            left: 0,
-                            opacity: 0,
-                            transition: "opacity 0.5s",
-                        }}
+                        style={ravenStyle}
                     />
                 ),
                 threshold: 50,
@@ -74,14 +72,7 @@ function RangeSlider({ min, max, value, step }) {
             {
                 component: (
                     <Raven3
-                        style={{
-                            width: "100%",
-                            position: "absolute",
-                            top: 0,
-                            left: 0,
-                            opacity: 0,
-                            transition: "opacity 0.5s",
-                        }}
+                        style={ravenStyle}
                     />
                 ),
                 threshold: 75,
@@ -89,14 +80,7 @@ function RangeSlider({ min, max, value, step }) {
             {
                 component: (
                     <Raven4
-                        style={{
-                            width: "100%",
-                            position: "absolute",
-                            top: 0,
-                            left: 0,
-                            opacity: 0,
-                            transition: "opacity 0.5s",
-                        }}
+                        style={ravenStyle}
                     />
                 ),
                 threshold: 90,
@@ -104,14 +88,7 @@ function RangeSlider({ min, max, value, step }) {
             {
                 component: (
                     <Raven5
-                        style={{
-                            width: "100%",
-                            position: "absolute",
-                            top: 0,
-                            left: 0,
-                            opacity: 0,
-                            transition: "opacity 0.5s",
-                        }}
+                        style={ravenStyle}
                     />
                 ),
                 threshold: 101,
