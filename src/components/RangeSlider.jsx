@@ -42,7 +42,7 @@ function RangeSlider({ min, max, value, step }) {
      */
     const ravenStyle = {
         width: "100%",
-        height: "80%",
+        height: "100%",
         // maxWidth: "300px",
         position: "absolute",
         top: 0,
@@ -169,17 +169,12 @@ function RangeSlider({ min, max, value, step }) {
             <div className="content-container-raven">{setImage()}</div>
 
             <div className="range-slider">
-                <div className="slider-values">
+                {/* <div className="slider-values">
                     <small>{min}%</small>
-                    {/* <input
-                  type="number"
-                  value={inputValue}
-                  onInput={handleNumberInput}
-                  min={min} max={max}
-                  className="number-input"
-                  step={step}
-                /> */}
                     <small>{max}%</small>
+                </div> */}
+                <div className="slider-value">
+                    <small>{min}%</small>
                 </div>
                 <div className="slider-container">
                     <input
@@ -200,6 +195,9 @@ function RangeSlider({ min, max, value, step }) {
                         className="progress"
                         style={{ width: `${sliderRange}%` }}
                     ></div>
+                </div>
+                <div className="slider-value">
+                    <small>{max}%</small>
                 </div>
             </div>
 
