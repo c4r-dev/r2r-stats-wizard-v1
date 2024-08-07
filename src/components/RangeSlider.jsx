@@ -40,18 +40,23 @@ function RangeSlider({ min, max, value, step }) {
         return <Raven5 style={{ width: "100%", margin: "0 auto" }} />;
       }
      */
+    const ravenStyle = {
+        width: "100%",
+        height: "100%",
+        // maxWidth: "300px",
+        position: "absolute",
+        top: 0,
+        left: 0,
+        opacity: 0,
+        transition: "opacity 0.5s",
+    }
+
+
         const images = [
             {
                 component: (
                     <Raven1
-                        style={{
-                            width: "100%",
-                            position: "absolute",
-                            top: 0,
-                            left: 0,
-                            opacity: 0,
-                            transition: "opacity 0.5s",
-                        }}
+                        style={ravenStyle}
                     />
                 ),
                 threshold: 25,
@@ -59,14 +64,7 @@ function RangeSlider({ min, max, value, step }) {
             {
                 component: (
                     <Raven2
-                        style={{
-                            width: "100%",
-                            position: "absolute",
-                            top: 0,
-                            left: 0,
-                            opacity: 0,
-                            transition: "opacity 0.5s",
-                        }}
+                        style={ravenStyle}
                     />
                 ),
                 threshold: 50,
@@ -74,14 +72,7 @@ function RangeSlider({ min, max, value, step }) {
             {
                 component: (
                     <Raven3
-                        style={{
-                            width: "100%",
-                            position: "absolute",
-                            top: 0,
-                            left: 0,
-                            opacity: 0,
-                            transition: "opacity 0.5s",
-                        }}
+                        style={ravenStyle}
                     />
                 ),
                 threshold: 75,
@@ -89,14 +80,7 @@ function RangeSlider({ min, max, value, step }) {
             {
                 component: (
                     <Raven4
-                        style={{
-                            width: "100%",
-                            position: "absolute",
-                            top: 0,
-                            left: 0,
-                            opacity: 0,
-                            transition: "opacity 0.5s",
-                        }}
+                        style={ravenStyle}
                     />
                 ),
                 threshold: 90,
@@ -104,14 +88,7 @@ function RangeSlider({ min, max, value, step }) {
             {
                 component: (
                     <Raven5
-                        style={{
-                            width: "100%",
-                            position: "absolute",
-                            top: 0,
-                            left: 0,
-                            opacity: 0,
-                            transition: "opacity 0.5s",
-                        }}
+                        style={ravenStyle}
                     />
                 ),
                 threshold: 101,
@@ -192,17 +169,12 @@ function RangeSlider({ min, max, value, step }) {
             <div className="content-container-raven">{setImage()}</div>
 
             <div className="range-slider">
-                <div className="slider-values">
+                {/* <div className="slider-values">
                     <small>{min}%</small>
-                    {/* <input
-                  type="number"
-                  value={inputValue}
-                  onInput={handleNumberInput}
-                  min={min} max={max}
-                  className="number-input"
-                  step={step}
-                /> */}
                     <small>{max}%</small>
+                </div> */}
+                <div className="slider-value">
+                    <small>{min}%</small>
                 </div>
                 <div className="slider-container">
                     <input
@@ -223,6 +195,9 @@ function RangeSlider({ min, max, value, step }) {
                         className="progress"
                         style={{ width: `${sliderRange}%` }}
                     ></div>
+                </div>
+                <div className="slider-value">
+                    <small>{max}%</small>
                 </div>
             </div>
 

@@ -40,9 +40,15 @@ function ShowResults() {
 
     let feedbackText = getFeedback();
 
+    const imageStyle = {
+        // width: "100%",
+        // margin: "0 auto",
+        width: "45%",
+        height: "45%",
+    };
 
     return (
-        <div className="content-container">
+        <div className="content-container results-screen">
             <h1>
                 What percentage of researchers do you think believe that there
                 is a reproducibility crisis?
@@ -50,12 +56,12 @@ function ShowResults() {
 
             <div className="percent-ravens-container">
                 <div className="percent-raven-container-left">
-                    <Raven61 style={{ width: "100%", margin: "0 auto" }} />
+                    <Raven61 style={imageStyle} />
                     <h1>Your Answer</h1>
                     <h2>{guess}%</h2>
                 </div>
                 <div className="percent-raven-container-right">
-                    <Raven62 style={{ width: "100%", margin: "0 auto" }} />
+                    <Raven62 style={imageStyle} />
                     <h1>Right Answer</h1>
                     <h2>91%</h2>
                 </div>
@@ -73,7 +79,7 @@ function ShowResults() {
                             </li>
                             <li>{feedbackText.question2}</li>
                         </ul>
-                    <br></br>
+                    {/* <br></br> */}
                     <p>
                         <strong>
                             This data comes as part of a 2016 online Nature
