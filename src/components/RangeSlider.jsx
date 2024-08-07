@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { ReactComponent as Raven1 } from "../assets/ravens_dots_and_clouds/raven1.svg";
-import { ReactComponent as Raven2 } from "../assets/ravens_dots_and_clouds/raven2.svg";
-import { ReactComponent as Raven3 } from "../assets/ravens_dots_and_clouds/raven3.svg";
-import { ReactComponent as Raven4 } from "../assets/ravens_dots_and_clouds/raven4.svg";
-import { ReactComponent as Raven5 } from "../assets/ravens_dots_and_clouds/raven5.svg";
+import { ReactComponent as Raven1 } from "../assets/ravens_dots_and_clouds/raven-phase-1.svg";
+import { ReactComponent as Raven2 } from "../assets/ravens_dots_and_clouds/raven-phase-2.svg";
+import { ReactComponent as Raven3 } from "../assets/ravens_dots_and_clouds/raven-phase-3.svg";
+import { ReactComponent as Raven4 } from "../assets/ravens_dots_and_clouds/raven-phase-4.svg";
+import { ReactComponent as Raven5 } from "../assets/ravens_dots_and_clouds/raven-phase-5.svg";
 
 import "./range-slider.css";
 
